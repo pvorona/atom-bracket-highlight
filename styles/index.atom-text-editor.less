@@ -1,0 +1,24 @@
+@import 'syntax-variables';
+
+@bracket-color: @mono-1;
+@bracket-initial-lightening: 35%;
+@bracket-final-transperency: 60%;
+@bracket-animation-duration: 1s;
+@bracket-border-width: 1px;
+
+@keyframes bracket-animation {
+  from {
+    border-color: lighten(@bracket-color, @bracket-initial-lightening);
+  }
+  40% {
+    border-color: fadeout(@bracket-color, @bracket-final-transperency * 0.7);
+  }
+  to {
+    border-color: fadeout(@bracket-color, @bracket-final-transperency);
+  }
+}
+
+atom-text-editor::shadow .bracket-matcher .region {
+  animation: bracket-animation @bracket-animation-duration;
+  border: @bracket-border-width solid fadeout(@bracket-color, @bracket-final-transperency);
+}
