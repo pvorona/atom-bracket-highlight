@@ -1,6 +1,6 @@
 {
   "name": "atom-bracket-highlight",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Animates bracket highlighting",
   "repository": "https://github.com/pvorona/atom-bracket-highlight",
   "license": "MIT",
